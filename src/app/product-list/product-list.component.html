@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-3 mx-auto my-4" *ngFor="let product of products">
+    <mdb-card class="card-style" mdbWavesEffect>
+      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+        <!-- <mdb-card-img [src]="product.img" alt="Card image cap"> </mdb-card-img> -->
+        <img [src]="product.img" alt="Card image cap" class="card-img-top" />
+      </div>
+
+      <mdb-card-body>
+        <mdb-card-title>
+          <h4>{{ product.name }}</h4>
+        </mdb-card-title>
+
+        <p class="price-style">${{ product.price }}</p>
+        <mdb-card-text>{{ product.description }}</mdb-card-text>
+      </mdb-card-body>
+      <button mdbBtn color="primary">Buy</button>
+    </mdb-card>
+  </div>
+</div>
+<!-- <div *ngFor="let product of products">
+  <h3>
+    {{ product.name }}
+  </h3>
+</div> -->
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
